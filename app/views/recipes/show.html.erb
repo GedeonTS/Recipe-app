@@ -1,1 +1,29 @@
-<p>Here is are a single repice's details with it's repice foods</p>
+<div class='recipe-details-wrapper'>
+<%=render 'shared/navbar' %>
+<div class='recipe-details-inner'>
+<div class='recipe-details'>
+<h2><%=@recipe.name%></h2>
+<div class='recipe-details-line'>
+<h4>Preparation_time: <%=@recipe.preparation_time%></h4>
+<form action="/recipes/<%=params[:id]%>" method="patch" data-remote="true">
+          <input type="submit" value="Public">
+          <label class="switch" for="check">
+          <input type="checkbox" id="check" name="public" <%if @recipe.public == 'yes'%>checked<%end%> value="yes">
+            <span class="slider round"></span>
+          </label>
+        </form>
+</div>
+ <div class='recipe-details-line'>       
+<h4>Cooking_time: <%=@recipe.cooking_time%></h4>
+</div>
+<div class='recipe-details-line'>
+<p>Steps go here...</p>
+</div>
+</div>
+
+<div class='recipe-details-btns'>
+<%=button_to 'Generate shopping list'%>
+<%=button_to 'Add ingredient'%>
+</div>
+</div>
+</div>
