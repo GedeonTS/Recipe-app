@@ -1,0 +1,80 @@
+.recipe-list-container {
+  width: 100vw;
+  background-color: #00bbd42d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-list-wrapper {
+  width: 60%;
+  align-self: center;
+}
+
+.recipe-list {
+  margin-top: 40px;
+}
+
+.recipe-item {
+  background-color: #00bbd42d;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00bbd42d;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.link-create-recipe {
+  font-size: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #00bbd471;
+  padding-top: 130px;
+  margin-bottom: 130px;
+}
+
+.link-create-recipe:hover {
+  color: rgba(144, 144, 247, 0.767);
+}
+
+.list-recipe-title {
+  text-decoration: none;
+  color: #00bbd471;
+  margin-left: 30px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-recipe-title a {
+  text-decoration: none;
+  color: #206d779f;
+}
+
+.list-recipe-title a:hover {
+  color: rgba(144, 144, 247, 0.767);
+}
+
+.recipe-remove-btn {
+  color: blue;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.recipe-remove-btn:hover {
+  border: none;
+  color: antiquewhite;
+  background-color: #004ad450;
+}
+
+.descritption {
+  margin-right: 34px;
+  font-style: italic;
+}
