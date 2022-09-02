@@ -49,7 +49,7 @@ $ Rubocop
 - LinkedIn: [collinsmezie](https://linkedin.com/in/collinsmezie)
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/GedeonTS/Blog-app 
+Bug reports and pull requests are welcome on GitHub at https://github.com/GedeonTS/Recipe-app 
 This project is intended to be a safe, welcoming space for collaboration, and contributors are welcome.
 Fill free to reach us or contact in the issue page.
 
