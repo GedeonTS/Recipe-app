@@ -5,6 +5,19 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @food = Food.all
+
+    @recipe_food = Food.joins(:recipe_foods).includes(:recipe_foods)
+      .select('foods.name, foods.measurement_unit, foods.price,recipe_foods.quantity, recipe_foods.id')
+      .where(recipe_foods: { recipe_id: params[:id] })
+
+    if params[:public] && params[:check]
+      @recipe = Recipe.find(params[:id])
+      redirect_to recipe_path(params[:id]) if @recipe.update(public: params[:public])
+    elsif params[:check] && !params[:public]
+      @recipe = Recipe.find(params[:id])
+      redirect_to recipe_path(params[:id]) if @recipe.update(public: params[:public])
+    end
   end
 
   def new
@@ -22,6 +35,11 @@ class RecipesController < ApplicationController
         end
       end
     end
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    redirect_to recipe_path(params[:id]) if @recipe.update(public: params[:public])
   end
 
   def destroy
