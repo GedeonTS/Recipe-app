@@ -1,0 +1,12 @@
+<div class='new-recipe-container'>
+<%=render 'shared/navbar' %>
+<div class='new-recipe-wrapper'>
+<h2>New Food</h2>
+ <%= form_with model:[Food.new], method: :post, local: true do |f| %>
+ <%= f.text_field :name, :placeholder => 'Food Name', required: true, class: 'form-control' %>
+ <%= f.text_field :measurement_unit, :placeholder => 'Measurement unit', class: 'form-control' %>
+ <%= f.number_field :price, :placeholder => 'Unit price', class: 'form-control' %>
+ <%= f.number_field :quantity, :placeholder => 'Quantity', class: 'form-control' %>
+ <%= f.submit "Create", data: {disable_with: "Creating..."}, class: "recipe-create-btn" %>
+ <% end %>
+</div></div>

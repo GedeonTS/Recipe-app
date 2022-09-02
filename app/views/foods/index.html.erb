@@ -1,1 +1,26 @@
-<p>This is the food template!</p>
+<div class='food-list-container'>
+<%=render 'shared/navbar' %>
+<div>
+<%= link_to 'Create', new_food_path, :class => 'link-create-food' %>
+<div class="food-list">
+<table class='food-list-table'>
+<thead>
+<tr>
+<th>Name</th>
+<th>Measurement unit</th>
+<th>Price</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<% @food.each_with_index do |food,index| %>
+  <% styling1 = index % 2 == 0 ? 'q-light' : 'q-dark' %>
+<tr class= "<%= styling1 %>">
+<td><%= food.name %></td>
+<td><%= food.measurement_unit %></td>
+<td>$<%= food.price %></td>
+<td><%= button_to 'REMOVE', food_path(food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'food-remove-btn' %></td>
+<%end%>
+</tbody>
+</table>
+</div>
