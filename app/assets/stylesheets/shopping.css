@@ -1,9 +1,36 @@
 .shop-details {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  justify-content: center;
   width: 60%;
   margin-left: 20%;
-  margin-top: 2%;
+}
+
+.shopping-container {
+  background-image: url(https://user-images.githubusercontent.com/97834160/188232931-b44682c8-e323-4f5a-b48e-78a480587502.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.shopping-container-inner {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(65, 105, 225, 0.288);
+}
+
+.shopping-ettempt {
+  padding-top: 100px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 40px;
+  font-family: 'Courgette', cursive;
+}
+
+.shopping-ettempt p {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }

@@ -1,8 +1,11 @@
 <div class='food-list-container'>
 <%=render 'shared/navbar' %>
 <div>
-<%= link_to 'Create', new_food_path, :class => 'link-create-food' %>
 <div class="food-list">
+<div class="food-list-inner">
+<div class='food-create-link'>
+<%= link_to 'Create', new_food_path, :class => 'link-create-food' %>
+</div>
 <table class='food-list-table'>
 <thead>
 <tr>
@@ -23,4 +26,5 @@
 <%end%>
 </tbody>
 </table>
+</div>
 </div>
