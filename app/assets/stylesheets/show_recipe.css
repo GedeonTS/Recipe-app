@@ -6,7 +6,7 @@
 
 .recipe-details-inner {
   width: 100vw;
-  height: 70vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,28 @@
   color: #fff;
 }
 
+.recipe-details-btns a {
+  border: none;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 4vh;
+  text-decoration: none;
+  font-size: 12px;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #2195f39a;
+  color: #fff;
+}
+
 .recipe-details-btns button:hover {
+  background-color: #2195f3;
+  color: #fff;
+}
+
+.recipe-details-btns a:hover {
   background-color: #2195f3;
   color: #fff;
 }
