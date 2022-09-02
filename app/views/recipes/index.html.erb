@@ -1,0 +1,20 @@
+<div class='recipe-list-container'>
+<%=render 'shared/navbar' %>
+<div class='recipe-list-wrapper'>
+<%= link_to 'Create', new_recipe_path, :class => 'link-create-recipe' %>
+<div class="recipe-list">
+<% @recipe.each do |recipe| %>
+<div class='recipe-item'>
+<div class="list-recipe-title">
+<%= link_to recipe.name, recipe_path(recipe) %>
+<%= button_to 'REMOVE',  recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?' }, class: 'recipe-remove-btn' %>
+</div>
+
+<div class='descritption'>
+<%=recipe.description %>
+</div>
+</div>
+<% end %>
+</div>
+</div>
+</div>

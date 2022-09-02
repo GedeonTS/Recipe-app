@@ -13,4 +13,14 @@
  *= require_tree .
  *= require_self
  *= require_'log'
+ *= require_'new_recipe'
+ *= require_'recipe_list'
+ *= require_'nav'
+ *= require_'show_recipe'
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
