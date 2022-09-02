@@ -1,0 +1,147 @@
+.recipe-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.recipe-details-inner {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-left: 6px solid #2196f3;
+  border-right: 6px solid #2196f3;
+  border-radius: 0.8%;
+  background-color: #fff;
+}
+
+.recipe-details h2 {
+  font-size: 30px;
+  color: #2196f3;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.recipe-details-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-left: 7.5%;
+}
+
+.recipe-details-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-top: 2%;
+  border-bottom: rgb(185, 183, 183) 2px solid;
+}
+
+.recipe-details-btns button {
+  border: none;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 4vh;
+  border-radius: 12px;
+  background-color: #2195f39a;
+  color: #fff;
+}
+
+.recipe-details-btns a {
+  border: none;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 4vh;
+  text-decoration: none;
+  font-size: 12px;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #2195f39a;
+  color: #fff;
+}
+
+.recipe-details-btns button:hover {
+  background-color: #2195f3;
+  color: #fff;
+}
+
+.recipe-details-btns a:hover {
+  background-color: #2195f3;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}

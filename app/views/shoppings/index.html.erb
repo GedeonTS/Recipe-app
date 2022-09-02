@@ -1,0 +1,23 @@
+<%=render 'shared/navbar' %>
+<div class="shop-details">
+<p> Amount of food items to buy: <%=@shopping_list.length%></p>
+<p> Total value of food needed: $<%=@price%></p>
+</div>
+<table class='food-list-table'>
+<thead>
+<tr>
+<th>Name</th>
+<th>Measurement unit</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<% @shopping_list.each_with_index do |food,index| %>
+  <% styling1 = index % 2 == 0 ? 'q-light' : 'q-dark' %>
+<tr class= "<%= styling1 %>">
+<td><%= food.name %></td>
+<td><%= food.measurement_unit %></td>
+<td>$<%= food.price %></td>
+<%end%>
+</tbody>
+</table>

@@ -1,0 +1,19 @@
+<div class='new-recipe-container'>
+<%=render 'shared/navbar' %>
+<div class='new-recipe-wrapper'>
+<h2>New Recipe Food</h2>
+ <%= form_with model:[@recipe, @recipe.recipe_foods.new], method: :post, local: true do |f| %>
+<p>
+    <b>Select food</b><br />
+ <div class="recipe-food-food-area">
+ <%Food.all.each do |food| %>
+ <div class='recipe-food-food'>
+    <%= f.radio_button :food_id, food.id %> <%=food.name %><br />
+</div>
+<% end %>
+</div>
+</p>
+<%=f.number_field :quantity, :placeholder => 'Quantity', class: 'form-control' %>
+ <%= f.submit "Create", data: {disable_with: "Creating..."}, class: "recipe-create-btn" %>
+ <% end %>
+</div></div>

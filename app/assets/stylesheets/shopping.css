@@ -1,0 +1,9 @@
+.shop-details {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 2%;
+  justify-content: space-between;
+}

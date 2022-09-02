@@ -1,0 +1,12 @@
+<div class='new-recipe-container'>
+<%=render 'shared/navbar' %>
+<div class='new-recipe-wrapper'>
+<h2>New Recipe</h2>
+ <%= form_with model:[Recipe.new], method: :post, local: true do |f| %>
+ <%= f.text_field :name, :placeholder => 'Recipe Name', required: true, class: 'form-control' %>
+ <%= f.text_field :description, :placeholder => 'Recipe Description', class: 'form-control' %>
+ <%= f.text_field :preparation_time, :placeholder => 'preparation_time', class: 'form-control' %>
+ <%= f.text_field :cooking_time, :placeholder => 'Cooking_time in hours', class: 'form-control' %>
+ <%= f.submit "Create", data: {disable_with: "Creating..."}, class: "recipe-create-btn" %>
+ <% end %>
+</div></div>

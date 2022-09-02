@@ -1,0 +1,54 @@
+<div class='recipe-details-wrapper'>
+<%=render 'shared/navbar' %>
+<div class='recipe-details-inner'>
+<div class='recipe-details'>
+<h2><%=@recipe.name%></h2>
+<div class='recipe-details-line'>
+<h4>Preparation_time: <%=@recipe.preparation_time%></h4>
+<form action="/recipes/<%=params[:id]%>" method="put" data-remote="true">
+          <input type="submit" value="Public">
+          <input type="hidden" name="check" value="check">
+          <label class="switch" for="check">
+          <input type="checkbox"
+            id="check" name="public" 
+            <%if @recipe.public == 'yes'%>checked<%end%> value="yes"
+           >
+          <span class="slider round"></span>
+          </label>
+</form>
+</div>
+ <div class='recipe-details-line'>       
+<h4>Cooking_time: <%=@recipe.cooking_time%></h4>
+</div>
+<div class='recipe-details-line'>
+<p><%=@recipe.description%></p>
+</div>
+</div>
+
+<div class='recipe-details-btns'>
+<%=link_to 'Generate shopping list', shoppings_path%>
+<%=link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id)%>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<% @recipe_food.each do |food| %>
+<tr>
+<td><%=food.name%></td>
+<td>$<%=food.price%></td>
+<td><%=food.quantity%>
+<%=food.measurement_unit%>
+</td>
+<td><%=button_to 'remove', recipe_recipe_food_path(@recipe.id, food.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'recipe-food-remove-btn' %></td>
+<td><%=link_to 'modify', edit_recipe_recipe_food_path(@recipe.id, food.id)%></td>
+</tr>
+<%end%>
+</div>
+</div>

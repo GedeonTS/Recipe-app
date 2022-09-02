@@ -1,0 +1,23 @@
+<div class='recipe-list-container'>
+<%=render 'shared/navbar' %>
+<div class='recipe-list-wrapper'>
+<i class="fa-solid fa-user-secret"></i>
+<div class="recipe-list">
+<% @all_public.each do |public| %>
+<div class='recipe-item'>
+<div class="list-recipe-title">
+<%= link_to public[:recipe].recipe_name, public_path(public[:recipe].id) %>
+<%= public[:recipe].name%>
+</div>
+
+<div class='descritption'>
+<p>Total food Items: <%=public[:recipe_food].length %></p>
+
+<p>Total prices: $<%=public[:recipe_food].sum(:price) %></p>
+
+</div>
+</div>
+<% end %>
+</div>
+</div>
+</div>
