@@ -1,3 +1,19 @@
 body {
   margin: 0;
 }
+
+.logout-btn-container {
+  background: none;
+}
+
+.logout-btn-container button {
+  background: none;
+  border: none;
+  color: brown;
+  margin-right: 20px;
+}
+
+.logout-btn-container button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
