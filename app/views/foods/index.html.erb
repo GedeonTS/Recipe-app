@@ -4,13 +4,15 @@
 <div class="food-list">
 <div class="food-list-inner">
 <div class='food-create-link'>
+<%=render 'shared/mobilenav' %>
 <%= link_to 'Create', new_food_path, :class => 'link-create-food' %>
 </div>
+
 <table class='food-list-table'>
 <thead>
 <tr>
 <th>Name</th>
-<th>Measurement unit</th>
+<th>Unit</th>
 <th>Price</th>
 <th>Actions</th>
 </tr>

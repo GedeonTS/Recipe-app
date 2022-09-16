@@ -28,3 +28,38 @@
   color: rgb(10, 10, 163);
   text-decoration: underline;
 }
+
+.mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .path-wrapper {
+    display: none;
+  }
+
+  .my-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    height: 34px;
+    width: 97vw;
+    margin-left: 1.5vw;
+    border-radius: 5px;
+    align-items: center;
+    position: fixed;
+    top: 80%;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+  }
+
+  .food-path {
+    display: flex;
+  }
+}

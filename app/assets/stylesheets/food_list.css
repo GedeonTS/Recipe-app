@@ -79,3 +79,7 @@ td {
 .food-create-link {
   padding-top: 100px;
 }
+
+.food-remove-btn {
+  min-width: 64px;
+}

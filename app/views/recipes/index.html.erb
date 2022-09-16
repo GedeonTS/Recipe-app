@@ -1,8 +1,10 @@
 <div class='recipe-list-container'>
 <div class='recipe-list-inner'>
 <%=render 'shared/navbar' %>
+<%=render 'shared/mobilenav' %>
 <div class='recipe-list-wrapper'>
 <i class="fa-solid fa-user-secret"></i>
+
 <%= link_to 'Create', new_recipe_path, :class => 'link-create-recipe' %>
 <div class="recipe-list">
 <% @recipe.each do |recipe| %>
