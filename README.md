@@ -1,5 +1,7 @@
 # Recipe App
-![Screenshot from 2022-09-02 23-57-53](https://user-images.githubusercontent.com/97834160/188240941-0b8f94fb-00b1-41a4-a283-830e9ec47637.png)
+
+![recipeLight-min](https://user-images.githubusercontent.com/97834160/190992022-3d9f5d7d-a3e5-4cac-aa92-a732227ff8ee.png)
+
 
 
 An app that keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
